@@ -1,4 +1,4 @@
-package com.seunome.todoapi.model
+package empresa.todoapi.model
 
 enum class Priority {
     LOW,
