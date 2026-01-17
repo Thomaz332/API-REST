@@ -1,5 +1,7 @@
 package empresa.todoapi.service
 
+import empresa.todoapi.dto.CreateTaskRequest
+import empresa.todoapi.model.Status
 import empresa.todoapi.exception.TaskNotFoundException
 import empresa.todoapi.model.Task
 import empresa.todoapi.repository.TaskRepository
@@ -11,7 +13,14 @@ class TaskService(
     private val taskRepository: TaskRepository
 ) {
 
-    fun create(task: Task): Task {
+    fun create(request: CreateTaskRequest): Task {
+        val task = Task(
+            title = request.title,
+            description = request.description,
+            priority = request.priority,
+            status = Status.PENDING,
+            createdAt = LocalDateTime.now()
+        )
         return taskRepository.save(task)
     }
 

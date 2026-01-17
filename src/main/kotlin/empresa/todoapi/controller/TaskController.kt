@@ -1,5 +1,7 @@
 package empresa.todoapi.controller
 
+import empresa.todoapi.dto.CreateTaskRequest
+import jakarta.validation.Valid
 import empresa.todoapi.model.Task
 import empresa.todoapi.service.TaskService
 import org.springframework.http.HttpStatus
@@ -13,10 +15,13 @@ class TaskController(
 ) {
 
     @PostMapping
-    fun create(@RequestBody task: Task): ResponseEntity<Task> {
-        val createdTask = taskService.create(task)
-        return ResponseEntity.status(HttpStatus.CREATED).body(createdTask)
+    fun create(
+        @Valid @RequestBody request: CreateTaskRequest
+    ): ResponseEntity<Task> {
+        val task = taskService.create(request)
+        return ResponseEntity.status(HttpStatus.CREATED).body(task)
     }
+
 
     @GetMapping
     fun findAll(): ResponseEntity<List<Task>> {
@@ -34,4 +39,5 @@ class TaskController(
         taskService.delete(id)
         return ResponseEntity.noContent().build()
     }
+
 }
