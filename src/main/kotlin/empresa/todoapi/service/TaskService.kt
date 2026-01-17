@@ -1,5 +1,6 @@
 package empresa.todoapi.service
 
+import empresa.todoapi.dto.UpdateStatusRequest
 import empresa.todoapi.dto.CreateTaskRequest
 import empresa.todoapi.model.Status
 import empresa.todoapi.exception.TaskNotFoundException
@@ -33,7 +34,19 @@ class TaskService(
             .orElseThrow { TaskNotFoundException("Task não encontrada") }
     }
 
+    fun updateStatus(id: Long, request: UpdateStatusRequest): Task {
+        val task = findById(id)
+
+        val updatedTask = task.copy(
+            status = request.status,
+            updatedAt = LocalDateTime.now()
+        )
+
+        return taskRepository.save(updatedTask)
+    }
+
     fun delete(id: Long) {
-        taskRepository.deleteById(id)
+        val task = findById(id) 
+        taskRepository.delete(task)
     }
 }

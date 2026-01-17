@@ -1,5 +1,7 @@
 package empresa.todoapi.controller
 
+import empresa.todoapi.dto.TaskResponse
+import empresa.todoapi.dto.UpdateStatusRequest
 import empresa.todoapi.dto.CreateTaskRequest
 import jakarta.validation.Valid
 import empresa.todoapi.model.Task
@@ -17,21 +19,32 @@ class TaskController(
     @PostMapping
     fun create(
         @Valid @RequestBody request: CreateTaskRequest
-    ): ResponseEntity<Task> {
+    ): ResponseEntity<TaskResponse> {
         val task = taskService.create(request)
-        return ResponseEntity.status(HttpStatus.CREATED).body(task)
+        return ResponseEntity.status(HttpStatus.CREATED)
+            .body(TaskResponse.fromEntity(task))
     }
 
-
     @GetMapping
-    fun findAll(): ResponseEntity<List<Task>> {
-        return ResponseEntity.ok(taskService.findAll())
+    fun findAll(): ResponseEntity<List<TaskResponse>> {
+        return ResponseEntity.ok(
+            taskService.findAll().map { TaskResponse.fromEntity(it) }
+        )
     }
 
     @GetMapping("/{id}")
-    fun findById(@PathVariable id: Long): ResponseEntity<Task> {
+    fun findById(@PathVariable id: Long): ResponseEntity<TaskResponse> {
         val task = taskService.findById(id)
-        return ResponseEntity.ok(task)
+        return ResponseEntity.ok(TaskResponse.fromEntity(task))
+    }
+ 
+    @PatchMapping("/{id}")
+    fun updateStatus(
+        @PathVariable id: Long,
+        @RequestBody request: UpdateStatusRequest
+    ): ResponseEntity<TaskResponse> {
+        val updatedTask = taskService.updateStatus(id, request)
+        return ResponseEntity.ok(TaskResponse.fromEntity(updatedTask))
     }
 
     @DeleteMapping("/{id}")
@@ -39,5 +52,6 @@ class TaskController(
         taskService.delete(id)
         return ResponseEntity.noContent().build()
     }
+
 
 }
