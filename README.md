@@ -54,7 +54,7 @@ src/
 - `title` (String)
 - `description` (String?)
 - `priority` (Enum: LOW, MEDIUM, HIGH)
-- `status` (Enum: PENDING, COMPLETED)
+- `status` (Enum: PENDING, IN_PROGRESS, COMPLETED)
 - `createdAt` (LocalDateTime)
 - `updatedAt` (LocalDateTime?)
 
