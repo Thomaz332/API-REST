@@ -1,5 +1,6 @@
 package empresa.todoapi.service
 
+import empresa.todoapi.exception.TaskNotFoundException
 import empresa.todoapi.model.Task
 import empresa.todoapi.repository.TaskRepository
 import org.springframework.stereotype.Service
@@ -20,7 +21,7 @@ class TaskService(
 
     fun findById(id: Long): Task {
         return taskRepository.findById(id)
-            .orElseThrow { RuntimeException("Task não encontrada") }
+            .orElseThrow { TaskNotFoundException("Task não encontrada") }
     }
 
     fun delete(id: Long) {
