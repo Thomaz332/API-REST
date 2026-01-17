@@ -112,11 +112,15 @@ Resposta `204 No Content`
 
 ## 🚀 Como executar o projeto
 
-No terminal
+### Requisitos
+
+`Java 17`
+
+### No terminal
 
 `git clone https://github.com/Thomaz332/API-REST.git`
 
-`cd todoapi`
+`cd API-REST`
 
 `.\mvnw.cmd spring-boot:run`
 
