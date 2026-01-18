@@ -128,7 +128,7 @@ A aplicação estará disponível em:
 
 Os endpoints podem ser testados utiizando Swagger UI ou Postman
 
-Via Swagger UI após rodar o programa cole isso na barra de pesquisa do navegador
+Via Swagger UI após rodar o programa cole a URL na barra de pesquisa do navegador (em caso de tela branca rodar mais uma vez a URL)
 
 `http://localhost:8080/swagger-ui/index.html`
 
