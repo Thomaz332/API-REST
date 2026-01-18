@@ -132,7 +132,7 @@ Via Swagger UI após rodar o programa cole a URL na barra de pesquisa do navegad
 
 `http://localhost:8080/swagger-ui/index.html`
 
-## 🧪 Testes Automatizados
+## 🎁 Testes Automatizados
 
 O projeto possui testes automatizados para criação, listagem e erro em busca de task
 
