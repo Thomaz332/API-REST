@@ -24,7 +24,7 @@ class TaskControllerTest {
     lateinit var objectMapper: ObjectMapper
 
     
-    /Testa criação de uma task com sucesso
+    //Testa criação de uma task com sucesso
     
     @Test
     fun `deve criar uma task com sucesso`() {
@@ -48,7 +48,7 @@ class TaskControllerTest {
             }
     }
 
-    /Testa listagem de tasks
+    //Testa listagem de tasks
 
     @Test
     fun `deve listar todas as tasks`() {
@@ -60,7 +60,7 @@ class TaskControllerTest {
             }
     }
 
-    /Testa erro ao buscar task inexistente
+    //Testa erro ao buscar task inexistente
     @Test
     fun `deve retornar 404 quando task nao existir`() {
 
