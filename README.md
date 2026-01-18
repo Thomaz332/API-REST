@@ -14,6 +14,7 @@ API REST simples para gerenciamento de tarefas (To-Do), desenvolvida com **Sprin
 - **Bean Validation**
 - **JUnit / MockMvc (testes)**
 - **Docker**
+- **SwaggerUI**
 ---
 
 ## 📁 Estrutura do Projeto
@@ -123,7 +124,13 @@ A aplicação estará disponível em:
 
 `http://localhost:8080`
 
-Os endpoints podem ser testados utiizando o Postman
+## 🧪 Testes
+
+Os endpoints podem ser testados utiizando Swagger UI ou Postman
+
+Via Swagger UI após rodar o programa cole isso na barra de pesquisa do navegador
+
+`http://localhost:8080/swagger-ui/index.html`
 
 ## 🧪 Testes Automatizados
 
