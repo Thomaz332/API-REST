@@ -12,7 +12,8 @@ API REST simples para gerenciamento de tarefas (To-Do), desenvolvida com **Sprin
 - **H2 Database (em memória)**
 - **Maven**
 - **Bean Validation**
-
+- **JUnit / MockMvc (testes)**
+- **Docker**
 ---
 
 ## 📁 Estrutura do Projeto
@@ -76,25 +77,21 @@ src/
 
 Resposta `201 Created`
 
-### 🔹 Listar Task
+### 🔹 Listar todas as task
 
 **GET** `/tasks`
 
 Resposta `200 OK`
 
-Lista todas as tasks
+### 🔹Listar task especifica
 
 **GET** `/tasks/{id}`
 
-Lista uma task especifica
-
 Resposta `200 OK`
 
-### 🔹 Atualizar Task
+### 🔹 Atualizar status da task
 
 **PATCH** `/tasks/{id}`
-
-Atualiza o status de uma task
 
 ```json
 {
@@ -112,20 +109,26 @@ Resposta `204 No Content`
 
 ## 🚀 Como executar o projeto
 
-### Requisitos
-
-`Java 17`
-
 ### No terminal
 
 `git clone https://github.com/Thomaz332/API-REST.git`
 
 `cd API-REST`
 
-`.\mvnw.cmd spring-boot:run`
+`docker build -t todo-api .`
+
+`docker run -p 8080:8080 todo-api`
 
 A aplicação estará disponível em:
 
 `http://localhost:8080`
 
 Os endpoints podem ser testados utiizando o Postman
+
+## 🧪 Testes Automatizados
+
+O projeto possui testes automatizados para criação, listagem e erro em busca de task
+
+### No terminal
+
+`.\mvnw.cmd test`
