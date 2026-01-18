@@ -2,7 +2,7 @@
 
 API REST simples para gerenciamento de tarefas (To-Do), desenvolvida com **Spring Boot 3**, **Kotlin** e **Spring Data JPA**, utilizando banco de dados **H2 em memória**.
 
-## 🚀 Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
 
 - **Java 17**
 - **Kotlin**
