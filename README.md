@@ -126,7 +126,7 @@ A aplicação estará disponível em:
 
 ## ✨ Testes
 
-Os endpoints podem ser testados utiizando Swagger UI ou Postman
+Os endpoints podem ser testados utilizando Swagger UI ou Postman
 
 Via Swagger UI após rodar o programa cole a URL na barra de pesquisa do navegador (em caso de tela branca rodar mais uma vez a URL)
 
