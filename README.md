@@ -124,7 +124,7 @@ A aplicação estará disponível em:
 
 `http://localhost:8080`
 
-## 🧪 Testes
+## ✨ Testes
 
 Os endpoints podem ser testados utiizando Swagger UI ou Postman
 
