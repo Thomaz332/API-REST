@@ -110,7 +110,7 @@ Resposta `204 No Content`
 
 ## 🚀 Como executar o projeto
 
-### No terminal
+### Via Docker no terminal
 
 `git clone https://github.com/Thomaz332/API-REST.git`
 
@@ -119,6 +119,16 @@ Resposta `204 No Content`
 `docker build -t todo-api .`
 
 `docker run -p 8080:8080 todo-api`
+
+### Ou 
+
+`git clone https://github.com/Thomaz332/API-REST.git`
+
+`cd API-REST`
+
+`.\mvnw.cmd spring-boot:run`
+
+O segundo metodo necessita do java 17 instalado 
 
 A aplicação estará disponível em:
 
