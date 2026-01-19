@@ -110,9 +110,11 @@ Resposta `204 No Content`
 
 ## 🚀 Como executar o projeto
 
-### Via Docker no terminal
+### Via Docker
 
 ### Requisitos: Docker instalado
+
+No terminal
 
 `git clone https://github.com/Thomaz332/API-REST.git`
 
@@ -125,6 +127,8 @@ Resposta `204 No Content`
 ### OU
 
 ### Requisitos: Java 17
+
+No terminal
 
 `git clone https://github.com/Thomaz332/API-REST.git`
 
