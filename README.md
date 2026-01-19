@@ -112,6 +112,8 @@ Resposta `204 No Content`
 
 ### Via Docker no terminal
 
+### Requisitos: Docker instalado
+
 `git clone https://github.com/Thomaz332/API-REST.git`
 
 `cd API-REST`
@@ -120,15 +122,15 @@ Resposta `204 No Content`
 
 `docker run -p 8080:8080 todo-api`
 
-### Ou 
+### OU
+
+### Requisitos: Java 17
 
 `git clone https://github.com/Thomaz332/API-REST.git`
 
 `cd API-REST`
 
 `.\mvnw.cmd spring-boot:run`
-
-O segundo metodo necessita do java 17 instalado 
 
 A aplicação estará disponível em:
 
